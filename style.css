@@ -1,0 +1,87 @@
+/* Existing styles remain the same */
+
+/* Theme toggle button */
+#theme-toggle {
+  background: white;
+  color: navy;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#theme-toggle:hover {
+  background: #ddd;
+}
+
+/* Back to Top button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: navy;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+}
+#back-to-top:hover {
+  background: black;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #111;
+  color: #eee;
+}
+body.dark-mode section {
+  background: #222;
+  color: #eee;
+}
+body.dark-mode nav {
+  background: navy;
+}
+body.dark-mode footer {
+  background: navy;
+}
+
+
+#hobbies img {
+    width: 300px;   /* set the width */
+    height: 200px;  /* set the height */
+    object-fit: cover; /* keeps images nicely cropped instead of stretched */
+    margin: 10px;   /* spacing between images */
+    border-radius: 10px; /* optional: rounded corners */
+  }
+
+
+  #personal-info img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+  }
+
+
+  nav a {
+
+    margin: 35px;
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
