@@ -1,0 +1,427 @@
+/* Existing styles remain the same */
+
+/* Theme toggle button */
+#theme-toggle {
+  background: white;
+  color: navy;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#theme-toggle:hover {
+  background: #ddd;
+}
+
+/* Back to Top button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: navy;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+}
+#back-to-top:hover {
+  background: black;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #111;
+  color: #eee;
+}
+body.dark-mode section {
+  background: #222;
+  color: #eee;
+}
+body.dark-mode nav {
+  background: navy;
+}
+body.dark-mode footer {
+  background: navy;
+}
+
+
+#hobbies img {
+    width: 300px;   /* set the width */
+    height: 250px;  /* set the height */
+    object-fit: cover; /* keeps images nicely cropped instead of stretched */
+    margin: 30px;  /* spacing between images */
+    border-radius: 10px; /* optional: rounded corners */
+  }
+
+
+  #personal-info img {
+    width: 700px;
+    height: 300;
+    border-radius: 10px;
+    margin: 30
+    px;
+    object-fit: cover;
+  }
+
+
+  nav a {
+
+    margin: 35px;
+
+  }
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: white;
+  color: black;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: navy;
+  color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+header button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  background: white;
+  color: navy;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background: black;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  background: black;
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: navy;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: navy;
+}
+
+/* Personal Info */
+#personal-info img {
+  width: 200px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Hobbies Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Skills */
+#skills ul {
+  list-style: none;
+  text-align: center;
+}
+
+#skills li {
+  background: navy;
+  color: white;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+#skills li:hover {
+  background: black;
+  color: white;
+}
+
+/* Contact */
+#contact ul, #contact li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+#contact strong {
+  color: navy;
+}
+
+#contact button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: navy;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  background: black;
+  color: white;
+}
+
+/* Back to top */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 18px;
+  background: navy;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+}
+
+#back-to-top:hover {
+  background: black;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 15px;
+  margin-top: 2rem;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: black;
+  color: white;
+}
+
+.dark-mode nav {
+  background: navy;
+}
+
+.dark-mode header {
+  background: black;
+  color: white;
+}
+
+.dark-mode #skills li {
+  background: white;
+  color: navy;
+}
+
+.dark-mode footer {
+  background: navy;
+  color: white;
+}
+
+/* General Theme */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: black;
+}
+
+header {
+  background: navy;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav {
+  background: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: navy;
+}
+
+/* Section Titles */
+section h2, section h3 {
+  color: navy;
+  border-bottom: 2px solid navy;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Activities Image Gallery */
+#activities img {
+  width: 250px;            /* Adjust size */
+  margin: 10px;
+  border: 4px solid navy;  /* Navy blue border */
+  border-radius: 12px;     /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#activities img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+}
+
+/* Skills Section */
+#skills ul li {
+  background: navy;
+  color: white;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+  list-style: none;
+}
+
+/* Contact Section */
+#contact div li {
+  list-style: none;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+#contact button {
+  background: navy;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background: black;
+}
+
+/* Back to Top */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#back-to-top:hover {
+  background: navy;
+}
+
+/* Footer */
+footer {
+  background: navy;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
