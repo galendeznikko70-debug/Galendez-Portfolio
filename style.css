@@ -1,427 +1,216 @@
-/* Existing styles remain the same */
-
-/* Theme toggle button */
-#theme-toggle {
-  background: white;
-  color: navy;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#theme-toggle:hover {
-  background: #ddd;
+/* ========== Theme variables ========== */
+/* Main theme: navy + light green + white */
+:root{
+  --navy: #0b2b4a;        /* primary navy */
+  --light-green: #bfeec9; /* soft light green */
+  --white: #ffffff;
+  --muted: #f3f6f8;
+  --text: #0b1720;
+  --card-radius: 1.25rem;
+  --border-size: 6px;
+  --transition: 0.28s ease;
 }
 
-/* Back to Top button */
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: navy;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  display: none;
-}
-#back-to-top:hover {
-  background: black;
+/* Dark mode variables */
+:root.dark {
+  --navy: #071427;
+  --light-green: #2b7a55;
+  --white: #0b0f13;
+  --muted: #111418;
+  --text: #e9eef1;
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background: #111;
-  color: #eee;
-}
-body.dark-mode section {
-  background: #222;
-  color: #eee;
-}
-body.dark-mode nav {
-  background: navy;
-}
-body.dark-mode footer {
-  background: navy;
-}
-
-
-#hobbies img {
-    width: 300px;   /* set the width */
-    height: 250px;  /* set the height */
-    object-fit: cover; /* keeps images nicely cropped instead of stretched */
-    margin: 30px;  /* spacing between images */
-    border-radius: 10px; /* optional: rounded corners */
-  }
-
-
-  #personal-info img {
-    width: 700px;
-    height: 300;
-    border-radius: 10px;
-    margin: 30
-    px;
-    object-fit: cover;
-  }
-
-
-  nav a {
-
-    margin: 35px;
-
-  }
-
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-body {
-  background: white;
-  color: black;
-  line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+/* Global reset & base */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg,var(--muted),var(--white));
+  color: var(--text);
+  line-height:1.5;
+  transition: background var(--transition), color var(--transition);
+  --gutter: 20px;
+  padding-bottom: 80px;
 }
 
 /* Header */
-header {
-  text-align: center;
-  padding: 2rem;
-  background: navy;
-  color: white;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+header{
+  background: linear-gradient(90deg,var(--navy), rgba(11,43,74,0.85));
+  color: var(--white);
+  padding: 26px 18px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 6px 18px rgba(11,43,74,0.25);
 }
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.header-inner{
+  max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;
 }
+.titles h1{font-size:1.6rem;letter-spacing:1px}
+.titles h2{font-size:1.1rem;opacity:0.95}
+.titles h3{font-size:0.95rem;opacity:0.9}
 
-header h2 {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-}
-
-header h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-
-header button {
-  padding: 10px 15px;
+/* Buttons in header */
+.btn{
+  background: var(--white);
+  color: var(--navy);
   border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  background: white;
-  color: navy;
-  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor:pointer;
+  font-weight:600;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-
-header button:hover {
-  background: black;
-  color: white;
-}
+.btn:hover{transform:translateY(-2px)}
 
 /* Navigation */
-nav {
-  background: black;
-  display: flex;
-  justify-content: center;
-  padding: 0.8rem;
-  gap: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+nav{
+  position: sticky; top:0; z-index:900;
+  background: rgba(11,43,74,0.95);
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(7,20,40,0.2);
+}
+nav a{
+  color: var(--white);
+  text-decoration:none;
+  margin: 0 14px;
+  font-weight:700;
+  font-size:0.95rem;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
+/* Main panels */
+main{max-width:1100px;margin:28px auto;padding:0 16px;}
 
-nav a:hover {
-  color: navy;
-}
-
-/* Sections */
-section {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: navy;
-}
-
-/* Personal Info */
-#personal-info img {
-  width: 200px;
-  border-radius: 20px;
-  margin: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Hobbies Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Skills */
-#skills ul {
-  list-style: none;
-  text-align: center;
-}
-
-#skills li {
-  background: navy;
-  color: white;
-  padding: 10px;
-  margin: 8px;
-  border-radius: 10px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-#skills li:hover {
-  background: black;
-  color: white;
-}
-
-/* Contact */
-#contact ul, #contact li {
-  list-style: none;
-  margin: 5px 0;
-}
-
-#contact strong {
-  color: navy;
-}
-
-#contact button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: none;
-  background: navy;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#contact button:hover {
-  background: black;
-  color: white;
-}
-
-/* Back to top */
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 12px 18px;
-  background: navy;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  display: none;
-  transition: 0.3s;
-}
-
-#back-to-top:hover {
-  background: black;
-  color: white;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background: black;
-  color: white;
-  padding: 15px;
-  margin-top: 2rem;
-}
-
-/* Dark Mode */
-.dark-mode {
-  background: black;
-  color: white;
-}
-
-.dark-mode nav {
-  background: navy;
-}
-
-.dark-mode header {
-  background: black;
-  color: white;
-}
-
-.dark-mode #skills li {
-  background: white;
-  color: navy;
-}
-
-.dark-mode footer {
-  background: navy;
-  color: white;
-}
-
-/* General Theme */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: white;
-  color: black;
-}
-
-header {
-  background: navy;
-  color: white;
-  text-align: center;
+/* Panels/sections */
+.panel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));
+  border-radius: 12px;
   padding: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 25px rgba(11,43,74,0.06);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+:root.dark .panel{
+  background: linear-gradient(180deg, rgba(8,12,16,0.45), rgba(11,16,20,0.4));
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
-header button {
-  background: black;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  margin-top: 10px;
-  border-radius: 8px;
-  cursor: pointer;
+/* Section headings */
+.panel h2{
+  font-size:1.25rem;
+  color: var(--navy);
+  margin-bottom: 14px;
+  border-bottom: 2px solid rgba(11,43,74,0.08);
+  padding-bottom:8px;
 }
 
-nav {
-  background: black;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+/* Photo grid (responsive) */
+.photo-grid{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: stretch;
+  margin: 12px 0 18px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+/* Photo card */
+.photo-card{
+  display:block;
+  border-radius: var(--card-radius);
+  padding: var(--border-size);
+  /* border trick: gradient border with white interior */
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    linear-gradient(120deg, var(--navy), var(--light-green)) border-box;
+  border: solid var(--border-size) transparent;
+  transition: transform var(--transition), box-shadow var(--transition);
+  overflow: hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.photo-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius: calc(var(--card-radius) - var(--border-size));
+  display:block;
+  box-shadow: 0 8px 18px rgba(7,20,40,0.12);
+  transition: transform 0.32s ease, filter 0.28s ease;
 }
 
-nav a:hover {
-  color: navy;
+/* Hover effect (lift) */
+.photo-card:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(7,20,40,0.25);
+}
+.photo-card:hover img{
+  transform: scale(1.04);
+  filter: brightness(1.02);
 }
 
-/* Section Titles */
-section h2, section h3 {
-  color: navy;
-  border-bottom: 2px solid navy;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+/* Lighting (glow) effect applied when .glow-on is on body */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 8px rgba(11,43,74,0.18), 0 0 0 rgba(191,238,201,0); }
+  50%{ box-shadow: 0 0 18px rgba(11,43,74,0.32), 0 0 12px rgba(191,238,201,0.12); }
+  100%{ box-shadow: 0 0 8px rgba(11,43,74,0.18), 0 0 0 rgba(191,238,201,0); }
+}
+body.glow-on .photo-card{
+  animation: glowPulse 2.2s ease-in-out infinite;
+  transform-origin: center;
 }
 
-/* Activities Image Gallery */
-#activities img {
-  width: 250px;            /* Adjust size */
-  margin: 10px;
-  border: 4px solid navy;  /* Navy blue border */
-  border-radius: 12px;     /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Shadow */
-  transition: transform 0.3s, box-shadow 0.3s;
+/* Alternative smaller images for activity thumbnails */
+.photo-card.small img{height:140px}
+
+/* Bio text */
+.bio p{margin:8px 0; font-size:0.95rem}
+
+/* Lists */
+.hobby-list, .skill-list{list-style:none; margin:10px 0; display:flex; flex-wrap:wrap; gap:10px}
+.hobby-list li, .skill-list li{
+  background: linear-gradient(90deg,var(--navy), rgba(11,43,74,0.9));
+  color:var(--white);
+  padding:8px 12px;border-radius:10px;font-weight:700;
 }
 
-#activities img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+/* Contact form */
+#contact-form{max-width:700px;display:grid;gap:12px}
+.form-row{display:flex;flex-direction:column}
+.form-row label{font-weight:700;margin-bottom:6px}
+.form-row input, textarea{
+  padding:10px;border-radius:8px;border:1px solid rgba(7,20,40,0.08);
+  outline:none;transition:box-shadow 0.12s ease;
 }
+.form-row input:focus, textarea:focus{box-shadow:0 6px 18px rgba(11,43,74,0.08)}
+.contacts p{font-weight:700}
 
-/* Skills Section */
-#skills ul li {
-  background: navy;
-  color: white;
-  padding: 8px;
-  margin: 5px 0;
-  border-radius: 6px;
-  list-style: none;
-}
-
-/* Contact Section */
-#contact div li {
-  list-style: none;
-  margin: 8px 0;
-  font-weight: bold;
-}
-
-#contact button {
-  background: navy;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-#contact button:hover {
-  background: black;
-}
-
-/* Back to Top */
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: black;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-#back-to-top:hover {
-  background: navy;
+/* Back to top button */
+#back-to-top{
+  position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(180deg,var(--navy), rgba(11,43,74,0.92));
+  color:var(--white);border:none;cursor:pointer;display:none;
+  box-shadow: 0 6px 18px rgba(11,43,74,0.18);
 }
 
 /* Footer */
-footer {
-  background: navy;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
+footer{
+  text-align:center;padding:18px;margin-top:28px;background:linear-gradient(90deg,var(--navy), rgba(11,43,74,0.9));
+  color:var(--white);
+  border-radius: 10px;
+  max-width:1100px;margin: 20px auto 60px;
 }
 
+/* Responsive tweaks */
+@media (max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:10px}
+  .titles h1{font-size:1.25rem}
+  .photo-card img{height:140px}
+}
 
+/* Dark mode helper (class toggled on documentElement for full variable control) */
+html.dark, :root.dark {
+  /* simply set the variables in :root.dark at the top - also applied to html.dark */
+}
+/* Existing styles remain the same */
 
-
-
-
-
+/* Theme toggle button */
